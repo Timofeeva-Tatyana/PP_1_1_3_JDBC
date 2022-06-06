@@ -11,21 +11,12 @@ public class Util {
     public static Connection connection;
 
     public static Connection getConnection() {
-
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            if (!connection.isClosed()) {
-                //System.out.println("Connection successful");
-            }
-
-
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Не удалось загрузить класс драйвер");
         }
-
         return connection;
     }
-
 
 }
